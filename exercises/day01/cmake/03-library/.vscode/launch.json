@@ -5,13 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) ubuntu",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/app/app",
             "args": [],
             "cwd" : "${workspaceFolder}/build",
             "miDebuggerPath": "/usr/bin/gdb"
-        }
+        },
+        {
+            "name": "(gdb) gitpod",
+            "type": "gdb",
+            "request": "launch",
+            "target": "${workspaceFolder}/build/app/app",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText"
+        },
     ]
 }

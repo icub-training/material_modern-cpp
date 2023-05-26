@@ -9,7 +9,7 @@ We shall use Markdown to document the final assigment of the `Modern C++` course
 
 - A [basic](01-basic/basic.md) document.
 - An [advanced](02-advanced/advanced.md) document.
-- Example of a [report](./03-report/samplereport.md).
+- Example of a [report](./03-samplereport/report.md).
 
 
 Some references:
