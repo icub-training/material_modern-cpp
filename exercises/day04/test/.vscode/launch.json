@@ -8,7 +8,7 @@
             "name": "(gdb) ubuntu",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/day98",
+            "program": "${workspaceFolder}/build/test",
             "args": [],
             "cwd" : "${workspaceFolder}/build",
             "miDebuggerPath": "/usr/bin/gdb"
@@ -17,7 +17,7 @@
             "name": "(gdb) gitpod",
             "type": "gdb",
             "request": "launch",
-            "target": "${workspaceFolder}/build/day98",
+            "target": "${workspaceFolder}/build/test",
             "cwd": "${workspaceRoot}",
             "valuesFormatting": "parseText"
         },
