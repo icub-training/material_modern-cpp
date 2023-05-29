@@ -1,13 +1,13 @@
 
 cmake_minimum_required(VERSION 3.20)
 
-set(ROOT_PROJECT_NAME test)
+set(ROOT_PROJECT_NAME cpp98)
 
 project(
   ${ROOT_PROJECT_NAME}
   VERSION 0.1.0.0
   
-  DESCRIPTION "Modern C++, test"
+  DESCRIPTION "Modern C++, day02, cpp98"
   LANGUAGES CXX)
 
 include(../../shared/CMakeOptions.cmake)
