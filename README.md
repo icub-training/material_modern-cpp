@@ -10,8 +10,8 @@ The structure of the repo is the following:
 
 
 This repository can be used with [gipod](https://www.gitpod.io/docs/introduction/getting-started) and is already configured to use CMake, gcc, gdb and Visual Studio Code to execute the exercises.
-Here some gitpod prerequisites:
 
+Here some gitpod prerequisites:
 > **Warning**
 > 
 > Visit your [Gitpod Integrations](https://gitpod.io/integrations) and make sure that all GitHub permissions are enabled (click on the ellipsis).
