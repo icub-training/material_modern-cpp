@@ -18,4 +18,4 @@ Here some gitpod prerequisites:
 >
 >  **Note**
 >  
-> If you didn't installed the gitpod browser extension, visit your [Gitpod Workspaces](https://gitpod.io/workspaces) and click on the green button to create a new workspace by providing the URL of this repository.
+> If you didn't install the gitpod browser extension, visit your [Gitpod Workspaces](https://gitpod.io/workspaces) and click on the green button to create a new workspace by providing the URL of this repository.
