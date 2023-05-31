@@ -225,11 +225,11 @@ namespace pimpl {
         void parse(const char *input);
 
     private:
-        Parser(const Parser&);            
-        Parser& operator=(const Parser&); 
+        Parser(const Parser&);              // non copyable         
+        Parser& operator=(const Parser&);   //  
 
-        struct Impl;
-        Impl* pImpl;    
+        struct Impl;                        // forward declataion of implementation class
+        Impl* pImpl;                        // the PIMPL
     }; 
 
 }
