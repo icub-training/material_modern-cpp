@@ -259,7 +259,8 @@ namespace test06 {
     
     
 // MODERNC++PREREQUISITES-composition-impl    
-namespace test06 {    
+namespace test06 {   
+
     LPAIR::LPAIR(const posv_t max, const posv_t v0, const posv_t v1) : ln0(max, v0), ln1(max, v1) {}
 
     void LPAIR::get(posv_t &v0, posv_t &v1) const 
@@ -389,7 +390,7 @@ namespace test05 {
 
     void runit()
     {
-        DeviceDriver *d = generate(DeviceDriver::Type::type0, 999);
+        DeviceDriver *d = generate(DeviceDriver::type0, 999);
         d->open();
         d->write(100);
         int vv = d->read();
@@ -441,12 +442,10 @@ namespace pimpl {
     // the implementation
 
     struct Parser::Impl
-    {
-       
+    {      
         Impl(const char *params) 
         {
             // dont use it so far
-
         }
                    
         void parse(const char *input)
@@ -495,18 +494,32 @@ namespace test08 {
         vv.push_back(1);
         vv.push_back(5); 
         // now the vector contains three values: {3, 1, 5}
+        std::cout << "vector vv contains " << vv.size() << " elements:" << std::endl; 
+        for(size_t i=0; i<vv.size(); i++)
+        {
+           std::cout << "vv[" << i << "] =" << vv[i] << std::endl;  
+        }        
         // ok, now i want to sort the vector.
-        //std::sort(vv.begin(), vv.end());
+        std::sort(vv.begin(), vv.end());
         // ok, now the order is {1, 3, 5}
+        std::cout << "after sorting vector vv contains " << vv.size() << " elements:" << std::endl; 
+        for(size_t i=0; i<vv.size(); i++)
+        {
+           std::cout << "vv[" << i << "] =" << vv[i] << std::endl;  
+        }
 
         // is there the number 3 inside?
-        std::vector<int>::iterator r = std::find(vv.begin(), vv.end(), 3);
+        const int numbertofind = 3;
+        std::vector<int>::iterator r = std::find(vv.begin(), vv.end(), numbertofind);
         bool found = false;
         if(r != vv.end())
         {
             found = true;
         }
-    }
+
+        std::cout << "did std::find() find number " << numbertofind << "?" << std::endl; 
+        std::cout << (found ? "YES!" : "I'm sorry, no") << std::endl;
+    }   
 
 } // namespace test08    
 
