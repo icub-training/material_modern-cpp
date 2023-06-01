@@ -17,6 +17,17 @@ int main(int argc, char *argv[])
 
    // nullptr 
    mcore01::ex01::run();
+
+   // auto
+   mcore01::ex02::run();
    
+   // typealiases
+   mcore01::ex03::run();   
+
+   // initializerlist
+   mcore01::ex04::run();
+
+   // uniforminitialization
+   mcore01::ex05::run();
    return 0;
 }
