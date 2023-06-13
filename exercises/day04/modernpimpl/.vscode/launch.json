@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) ubuntu",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/mpimpl",
+            "args": [],
+            "cwd" : "${workspaceFolder}/build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "(gdb) gitpod",
+            "type": "gdb",
+            "request": "launch",
+            "target": "${workspaceFolder}/build/mpimpl",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText"
+        },
+    ]
+}
