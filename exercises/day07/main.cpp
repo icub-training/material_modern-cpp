@@ -1,12 +1,7 @@
 #include <memory>
 #include <iostream>
 #include <concepts>
-
-struct Point {
-    double X{0.0};
-    double Y{0.0};
-    Point(double _x, double _y): X(_x), Y(_y) {};
-};
+#include <ranges>
 
 template <typename T>
 T add (T a, T b) requires std::integral<T>{
@@ -36,6 +31,11 @@ int main(int argc, char *argv[])
     {
         // TODO write an "is_incrementable" concept
         // and use it
+    }
+
+    {
+        // TODO generate a series of numbers from 0 to 20
+        // and print it only the even. You must use views
     }
 
     return 0;
