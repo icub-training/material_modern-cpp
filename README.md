@@ -1,4 +1,4 @@
-# training-modern-cpp
+# material-modern-cpp
 This repository hosts the material of the course `Modern C++` 
 
 The structure of the repo is the following:
