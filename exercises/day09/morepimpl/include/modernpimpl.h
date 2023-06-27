@@ -123,6 +123,24 @@ namespace modern::pimpl::v04 {
       
 }     
 
+namespace modern::pimpl::v05 {
+
+
+    // {copiable, moveable} = {true, true}
+    // ruleoffive = true.
+    class Widget { 
+    public:
+        Widget();
+
+        
+        void doit();
+
+    private:
+        struct Impl;                    // use smart pointer
+        std::shared_ptr<Impl> pImpl;    // and pointer to it  
+    }; 
+      
+}  
 
 namespace modern::pimpl::singleton {
 
