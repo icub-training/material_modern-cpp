@@ -56,9 +56,20 @@ int main(int argc, char *argv[])
 
         modern::pimpl::v04::Widget widget04;
         widget04.doit();   
-    //    modern::pimpl::v03::Widget w04a = widget04; 
-    //    modern::pimpl::v03::Widget w04b = std::move(widget04);
+    //    modern::pimpl::v04::Widget w04a = widget04; 
+    //    modern::pimpl::v04::Widget w04b = std::move(widget04);
     //    w04a = w04a;
+    }
+
+   {   // modern widget v05:  shared pointer
+        // - copiable, 
+        // - moveable
+
+        modern::pimpl::v05::Widget widget05;
+        widget05.doit();   
+        modern::pimpl::v05::Widget w05a = widget05; 
+        modern::pimpl::v05::Widget w05b = std::move(widget05);
+        w05a = w05a;
     }
 
     {   // modern singleton: 

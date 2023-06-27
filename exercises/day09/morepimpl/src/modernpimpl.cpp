@@ -179,6 +179,33 @@ namespace modern::pimpl::v04 {
     
 }
 
+// - v05
+
+
+struct modern::pimpl::v05::Widget::Impl
+{
+    std::string _name {"hello"};
+
+    void doit()
+    {
+        std::cout << _name << std::endl;
+    }  
+};
+
+namespace modern::pimpl::v05 {    
+
+    Widget::Widget()                    // allocate data members for
+    : pImpl(std::make_shared<Impl>())   // std::shared_ptr
+    {}                                  // via std::make_shared
+
+
+    void Widget::doit()
+    {
+        pImpl->doit();
+    }
+    
+}
+
 
 // singleton
 
