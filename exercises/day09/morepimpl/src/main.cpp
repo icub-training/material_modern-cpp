@@ -78,7 +78,12 @@ int main(int argc, char *argv[])
         // - non destructable ?? why should I define the ctor? the compiler will do that for me
 
         modern::pimpl::singleton::theOne &theone = modern::pimpl::singleton::theOne::getInstance();
-        theone.doit();   
+        theone.doit();  
+
+        modern::pimpl::singleton::theOne &theone1 = modern::pimpl::singleton::theOne::getInstance();
+
+        // modern::pimpl::singleton::theOne another(theone); 
+        // modern::pimpl::singleton::theOne maybethesame = std::move(theone); 
     }
 
     return 1;
