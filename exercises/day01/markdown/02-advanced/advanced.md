@@ -93,10 +93,11 @@ See: https://mermaid.js.org/
 
 
 ```mermaid
-
 ---
 title: A simple sequence diagram
 ---
+
+%% this is a comment
 
 sequenceDiagram
     Alice->>John: Hello John, how are you?
@@ -108,7 +109,6 @@ sequenceDiagram
 
 
 ```mermaid
-
 ---
 title: A simple state diagram
 ---
@@ -156,7 +156,7 @@ stateDiagram
 In here are some examples of footnotes[^1]:
 
 
-Here's a simple footnote,[^2] and here's a longer one[^bignote], yet anotehr one:
+Here's a simple footnote,[^2] and here's a longer one[^bignote], yet another one:
 
 > In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
 of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole [^4], and that means comfort.
@@ -186,7 +186,7 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 [^bignote]: Here's one with multiple paragraphs and code.
 
     Indent paragraphs keeping a new line before to include them in the footnote.
-
+    
     addd inline code `int a{1};` or also something like that:
     ```C++
     void caller(void *p) { }
@@ -194,6 +194,6 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
     
     Add as many paragraphs as you like.
 
-[^4]: See in here what is a hottit-hole: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"    
+[^4]: See in here what is a hobbit-hole: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"    
 
 [^5]: How GitHub uses formulas: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions
