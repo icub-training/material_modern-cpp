@@ -24,12 +24,7 @@ See pictures.
 
 ```bash
 $ git clone https://github.com/USER/material_modern-cpp
-$ git remote add orig https://github.com/icub-training/material_modern-cpp
-$ git fetch orig
-$ git checkout master
-$ git pull
-$ git rebase orig/master
-$ git push --force-with-lease origin master
+$ cd material_modern-cpp
 $
 ```
 
@@ -38,8 +33,6 @@ $
 
 
 ## Update your clone
-
-## 
 
 ```bash
 $ git remote add orig https://github.com/icub-training/material_modern-cpp
