@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 
     {
         // TODO: Rewrite the above code using smart pointers
+        // Bonus: inspect the p.use_count() of the shared_ptr
     }
 
 }
