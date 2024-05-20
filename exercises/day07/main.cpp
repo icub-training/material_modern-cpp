@@ -2,6 +2,7 @@
 #include <iostream>
 #include <concepts>
 #include <ranges>
+#include <algorithm>
 
 template <typename T>
 T add (T a, T b) requires std::integral<T>{
