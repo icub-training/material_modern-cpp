@@ -8,20 +8,20 @@
 
 //using namespace std;
 
-int data;
-bool isDataReady;
+int data = 123;
+bool isDataReady = false;
 std::mutex mymutex;
 std::condition_variable c_var;
 const auto number_of_iteration = 5;
 
 void consumer()
 {
-    std::cout << "Consumer:  created " <<  std::endl;
+    std::cout << std::endl << std::endl << "******* Consumer:  created *************" <<  std::endl;
     auto i=0;
     while(true)
     {
         
-        std::cout << std::endl << std::endl << "Consumer: ------------- index " << i+1 <<  std::endl;
+        std::cout << std::endl << std::endl << "Consumer: ------------- iteration num " << i+1 <<  std::endl;
         std::unique_lock<std::mutex> ul(mymutex);  //note we use unique_lock instead of lock_guard
         c_var.wait(ul, [](){return isDataReady;}); //the check is useful for avoiding spurious wake
 
@@ -40,12 +40,12 @@ void consumer()
 
 void producer()
 {
-    std::cout << "Producer: created " <<  std::endl;
+    std::cout << std::endl << std::endl << "********* Producer: created ***********" <<  std::endl;
     auto i=0;
     while(true)
     {
         
-        std::cout << std::endl << std::endl << "Producer: ------------- index " << i+1 << std::endl;
+        std::cout << std::endl << std::endl << "Producer: ------------- iteration num " << i+1 << std::endl;
         //1. prepare the data 
         int dataProd = std::rand();
         std::cout << "Producer: my data is " << dataProd << std::endl;
@@ -60,7 +60,7 @@ void producer()
         }
 
         std::cout << "Producer: I'm abut to notify ... " << dataProd << std::endl;
-        c_var.notify_one();
+        c_var.notify_one(); //Here I have only one thread, otherwise I caould call notify_all()
         std::cout << "Producer: I'm abut to sleep ... " << dataProd << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(5));
         i++;
