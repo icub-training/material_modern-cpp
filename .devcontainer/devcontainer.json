@@ -1,12 +1,36 @@
 {
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "webfreak.debug",
-                "yzhang.markdown-all-in-one", 
-                "bierner.markdown-mermaid", 
-                "houkanshan.vscode-markdown-footnote"
-            ]
-        }
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  // Or for a C++ focused environment:
+  // "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Add any VS Code extensions you commonly use. Examples:
+        "ms-vscode.cpptools", // For C++
+        "ms-python.python",   // For Python
+        "redhat.java",        // For Java (if needed)
+        "ms-toolsai.jupyter",  // For Jupyter notebooks
+        "webfreak.debug",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "houkanshan.vscode-markdown-footnote"
+      ]
     }
+  },
+
+  // Optional: Forward ports if your applications need them.
+  // "forwardPorts": [3000, 8080],
+
+  // Optional: Set environment variables.
+  // "remoteEnv": {
+  //   "MY_VARIABLE": "my_value"
+  // },
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // For example, to update package lists and install some common tools:
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git build-essential cmake curl wget",
+
+  // Set the remote user. 'vscode' is common for these images and has sudo access.
+  "remoteUser": "vscode"
 }
